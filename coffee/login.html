@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop Login</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <div class="login-page">
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="coffee">
+          <img src="coffee logo.webp" alt="John's Coffee Logo" width="150" height="150">
+        </div>
+        <h1>John's Coffee</h1>
+        <p>Sign in your Account.</p>
+      </div>
+
+      <form id="login-form" class="login-form">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="Your username" required />
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Enter password" required />
+        <button type="submit">Login</button>
+        <div id="login-feedback" class="feedback"></div>
+      </form>
+      <p style="text-align:center;margin-top:12px;">
+        Don't have an account? <a href="register.html">Create one</a>
+      </p>
+    </div>
+  </div>
+  <script src="login.js"></script>
+</body>
+</html>

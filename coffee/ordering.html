@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop Ordering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>  
+  <div class="page-wrapper">
+    <header class="page-header">
+      <div style="display:flex;align-items:center;gap:16px;">
+      
+        <div class="site-logo" aria-hidden="true">
+            <img src="coffee logo.webp" alt="John's Coffee Logo" width="80" height="80" />
+        </div>
+        <div>
+          <p class="eyebrow">John's Coffee</p>
+          <h1>Welcome <br> John's Coffee is the best</h1>
+          <p>Pick your drink, set the quantity, and we’ll prepare it just like the café would. Enjoy!</p>
+        </div>
+      </div>
+      <div class="user-panel">
+        <span>Logged in as <strong id="current-user"></strong></span>
+        <button id="change-password" class="secondary-btn">Change Password</button>
+        <button id="logout">Logout</button>
+      </div>
+    </header>
+
+    <div class="main-grid">
+      <section class="menu-panel">
+        <h2>Menu</h2>
+        <div id="drink-grid" class="drink-grid"></div>
+      </section>
+
+      <aside class="summary-panel">
+        <h2>Your Order</h2>
+        <div class="order-summary">
+          <h3>Items</h3>
+          <ul id="order-list" class="summary-list"></ul>
+
+          <div class="summary-list">
+            <li><span>Subtotal</span><strong id="order-subtotal">$0.00</strong></li>
+            <li><span>Tax (7%)</span><strong id="order-tax">$0.00</strong></li>
+          </div>
+          <div class="total-row">
+            <span>Total</span>
+            <strong id="order-total">$0.00</strong>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label ><h1>Order Type</h1></label>
+          <div class="radio-grid">
+            <label><input type="radio" name="order-type" value="Pickup" checked /> <h2>Pickup</h2></label>
+            <label><input type="radio" name="order-type" value="Delivery" /> <h2>Delivery</h2></label>
+          </div>
+        </div>
+
+        <button id="place-order">Place Order</button>
+        <div id="order-feedback" class="feedback"></div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="password-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Change Password</h2>
+        <button id="close-modal" class="close-btn">×</button>
+      </div>
+      <form id="change-password-form">
+        <label for="current-pass">Current Password</label>
+        <input id="current-pass" type="password" placeholder="Enter current password" required />
+        <label for="new-pass">New Password</label>
+        <input id="new-pass" type="password" placeholder="Enter new password" required />
+        <label for="confirm-pass">Confirm Password</label>
+        <input id="confirm-pass" type="password" placeholder="Confirm new password" required />
+        <button type="submit">Update Password</button>
+        <div id="password-feedback" class="feedback"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

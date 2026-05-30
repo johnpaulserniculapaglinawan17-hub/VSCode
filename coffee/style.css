@@ -1,0 +1,574 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #d9b38c 0%, #8e5d39 42%, #422b1a 100%);
+  color: #2d1b10;
+  background: radial-gradient(circle at top left, rgba(217,179,140,0.4) 0%, rgba(142,93,57,0.4) 42%, rgba(66,43,26,0.8) 100%), 
+  url('coffee bg.jpg');
+  background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15), transparent 20%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.1), transparent 16%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.08), transparent 18%);
+  pointer-events: none;
+}
+
+.page-wrapper {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+  position: relative;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  padding: 26px 30px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #f2e2d7;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 2.4vw, 3rem);
+  color: #fff4e8;
+}
+
+.page-header p {
+  margin: 12px 0 0;
+  max-width: 640px;
+  color: #fff0da;
+  line-height: 1.7;
+}
+
+.user-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  min-width: 180px;
+}
+
+.user-panel span {
+  color: #fff0da;
+  font-size: 0.98rem;
+}
+
+.user-panel button {
+  width: auto;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #4e2f1b;
+  color: #fff;
+  font-weight: 700;
+}
+
+.main-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: 1.65fr 1fr;
+}
+
+.menu-panel,
+.summary-panel {
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.16);
+}
+
+.menu-panel h1,
+.summary-panel h2 {
+  margin-top: 0;
+  color: #5b3a23;
+}
+
+.drink-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.drink-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  border: 1px solid rgba(93, 61, 31, 0.16);
+  border-radius: 18px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.94);
+  align-items: center;
+}
+
+.drink-info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.drink-image {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 1px solid rgba(93, 61, 31, 0.16);
+}
+
+.drink-info h3 {
+  margin: 0;
+  font-size: 1.18rem;
+  color: #3f2717;
+}
+
+.orders-container {
+  display: grid;
+  gap: 20px;
+}
+
+.order-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(93, 61, 31, 0.14);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.order-items {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  color: #5b473f;
+}
+
+.order-summary-list {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+  border-top: 1px solid #f0e1cd;
+  padding-top: 14px;
+}
+
+.order-summary-list div {
+  display: flex;
+  justify-content: space-between;
+  color: #4f3525;
+}
+
+.order-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: #fcf3ea;
+  color: #5b3a23;
+  font-weight: 700;
+}
+
+.status-actions {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.status-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.status-select {
+  min-width: 180px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid #d8c1aa;
+  background: #fff;
+  color: #4f3525;
+}
+
+.status-btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 14px;
+  background: #5b3a23;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.status-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.drink-info p {
+  margin: 10px 0 0;
+  color: #6f5850;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.drink-meta {
+  text-align: right;
+}
+
+.price {
+  font-weight: 700;
+  color: #824f2d;
+  font-size: 1.05rem;
+}
+
+.quantity-control {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.quantity-control label {
+  font-size: 0.92rem;
+  color: #5d473f;
+}
+
+.quantity-control input {
+  width: 70px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid #d8c1aa;
+  font-size: 1rem;
+  text-align: center;
+  background: #faf1e9;
+}
+
+.summary-panel .input-group {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.summary-panel label {
+  font-weight: 700;
+  color: #5b3a23;
+}
+
+.radio-grid {
+  display: grid;
+  gap: 10px;
+  display: flex;
+  width: 18px;
+    height: 50px;
+    accent-color: #8e5d39; 
+    cursor: pointer;
+}
+
+.summary-panel input,
+.summary-panel select {
+  width: 100%;
+  border: 1px solid #d8c1aa;
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: #fff7f0;
+  font-size: 0.98rem;
+}
+
+.order-summary {
+  border-top: 1px solid #eed7c4;
+  padding-top: 18px;
+}
+
+.order-summary h3 {
+  margin: 0 0 14px;
+  font-size: 1rem;
+  color: #4f3525;
+}
+
+.summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.summary-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f2e0d2;
+  color: #5b4437;
+}
+
+.summary-list li strong {
+  color: #3c2314;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0 0;
+  font-size: 1.14rem;
+  font-weight: 700;
+}
+
+button {
+  width: 100%;
+  border: none;
+  border-radius: 16px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, #7d4d2f, #c98b67);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 38px rgba(125, 77, 47, 0.23);
+}
+
+.feedback {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #f8f0e7;
+  color: #2f1f14;
+  display: none;
+  white-space: pre-line; 
+}
+
+.login-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+.login-brand {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+
+.login-brand h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #4e2f1b;
+}
+
+.site-logo svg {
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+}
+
+.page-header .eyebrow { margin-bottom: 4px; }
+
+.login-brand p {
+  margin: 10px auto 0;
+  color: #6a4b3b;
+  line-height: 1.6;
+}
+
+.login-form {
+  display: grid;
+  gap: 18px;
+}
+
+.login-form label {
+  font-weight: 700;
+  color: #5a3f31;
+}
+
+.login-form input {
+  width: 100%;
+  border: 1px solid #d8c1aa;
+  border-radius: 14px;
+  padding: 14px 16px;
+  background: #fff7f0;
+  color: #3f2717;
+  font-size: 0.98rem;
+}
+
+.login-form button {
+  background: linear-gradient(135deg, #6a3d23, #c78a60);
+}
+
+@media (max-width: 880px) {
+  .page-wrapper {
+    padding: 18px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .user-panel {
+    align-items: flex-start;
+  }
+
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.coffee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  padding: 28px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.16);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #5b3a23;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #5b3a23;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(93, 61, 31, 0.1);
+}
+
+#change-password-form,
+#staff-change-password-form {
+  display: grid;
+  gap: 16px;
+}
+
+#change-password-form label,
+#staff-change-password-form label {
+  font-weight: 700;
+  color: #5a3f31;
+  font-size: 0.95rem;
+}
+
+#change-password-form input,
+#staff-change-password-form input {
+  width: 100%;
+  border: 1px solid #d8c1aa;
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: #fff7f0;
+  color: #3f2717;
+  font-size: 0.95rem;
+}
+
+#change-password-form button,
+#staff-change-password-form button {
+  margin-top: 8px;
+  padding: 14px 18px;
+}
+
+.secondary-btn {
+  background: #5b3a23 !important;
+  color: #fff !important;
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+  font-size: 0.9rem !important;
+  cursor: pointer !important;
+  border: none !important;
+  transition: background 0.2s !important;
+}
+
+.secondary-btn:hover {
+  background: #4e2f1b !important;
+}
+

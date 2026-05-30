@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - Bean & Brew</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-page">
+    <div class="login-card">
+      <div class="login-brand">
+        <div class="coffee">
+            <img src = "coffee logo.webp" alt = "Description of the image" width = "150" height = "150">
+        </div>
+        <h1>John's Coffee</h1>
+        <p>Create your Account </p>
+      </div>
+
+      <form id="register-form" class="login-form">
+        <label for="reg-username">Username</label>
+        <input id="reg-username" type="text" placeholder="Type a username" required />
+
+        <label for="reg-password">Password</label>
+        <input id="reg-password" type="password" placeholder="Type a password" required />
+
+        <label for="reg-password-confirm">Confirm Password</label>
+        <input id="reg-password-confirm" type="password" placeholder="Repeat password" required />
+
+        <button type="submit">Create Account</button>
+        <div id="register-feedback" class="feedback"></div>
+      </form>
+
+      <p style="text-align:center;margin-top:12px;">Already have an account? <a href="login.html">Sign in</a></p>
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>
